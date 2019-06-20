@@ -11,22 +11,18 @@ Flutter Tutorial - Flutter Web Video series can be watched here
     <table>
         <tr>
             <td style="text-align: center">
-                    <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/small.PNG" width="200"/>
-            </td>            
-            <td style="text-align: center">              
-                     <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/large.PNG" width="200"/>
-            </td>
-            <td style="text-align: center">
-                    <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/medium.PNG" width="200"/>
-          </td>
-           <td style="text-align: center">
-                    <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/Screenshot_1561065630.png" width="200"/>
-          </td>
+                    <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/Flutter_web_gif.gif" width="1000" heigth="600"/>
+            </td>  
         </tr>
-        <tr>
-         <td style="text-align: center">
-           <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/Flutter_web_gif.gif" width="1000" heigth="600"/>
-        </td>
+        <tr>    <td style="text-align: center">              
+                     <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/large.PNG" width="800"/></tr>
+            </td>
+            <tr><td style="text-align: center">
+                    <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/medium.PNG" width="600"/>
+                </td></tr>
+          <tr> <td style="text-align: center">
+                    <img src="https://github.com/whatsupcoders/Flutter-EuroRail/blob/master/flutter_euro_rail_web/assets/Screenshot_1561065630.png" width="400"/>
+          </td>
         </tr>
   </table>
   </div>
