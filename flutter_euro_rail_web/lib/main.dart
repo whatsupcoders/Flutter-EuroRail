@@ -9,11 +9,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Euro Rail',
       theme: ThemeData(
         primaryColor: Color(0xff003082),
       ),
-      home: MyHomePage(title: 'Euro Trains'),
+      home: MyHomePage(title: 'Euro Rail'),
     );
   }
 }
