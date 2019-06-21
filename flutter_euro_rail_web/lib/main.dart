@@ -32,85 +32,39 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {
-                //
-              }),
+          leading:IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: (){
+
+            },
+          ),
           title: Text(widget.title),
           actions: <Widget>[
             CustomLeadingAction(),
           ],
         ),
         body: Container(
-          child: CustomScrollView(
-          slivers: <Widget>[
-             SliverPadding(
-             padding: EdgeInsets.only(top: 8.0),
-             sliver:SliverGrid.count(
-                  childAspectRatio: 1.74,
-                  crossAxisCount: MediaQuery.of(context).size.width >= 1400
-                      ? 3
-                      : MediaQuery.of(context).size.width >= 800 ? 2 : 1,
-                  mainAxisSpacing: 2.0,
-                  children:
-                      places.map((place) => placeContainer(place)).toList(),
-                ),
-             ),
+          child:CustomScrollView(
+            slivers: <Widget>[
+              SliverPadding(padding: EdgeInsets.only(top:8.0),
+              sliver: SliverGrid.count(
+                childAspectRatio: 1.74,
+                crossAxisCount: MediaQuery.of(context).size.width >=1400
+                ?3
+                :MediaQuery.of(context).size.width>=800?2:1,
+                mainAxisSpacing: 2.0,
+                children:places.map((place)=> placeContainer(place)).toList(),
+              ),
+              )
             ],
-          ),
+          )
         ),
-        bottomNavigationBar: bottomNavigationMenu());
+        bottomNavigationBar: bottomNavigationMenu(),
+    );
   }
 
-  Widget CustomLeadingAction() => MediaQuery.of(context).size.width > 800
-      ? Row(
-          children: <Widget>[
-            IconButton(
-                icon: Icon(Icons.home),
-                onPressed: () {
-                  //
-                }),
-            SizedBox(
-              width: 10.0,
-            ),
-            IconButton(
-              icon: Icon(Icons.train),
-              onPressed: () {},
-            ),
-            SizedBox(
-              width: 10.0,
-            ),
-            IconButton(
-              icon: Icon(Icons.portrait),
-              onPressed: () {},
-            ),
-          ],
-        )
-      : IconButton(
-          icon: Icon(Icons.train),
-          onPressed: () {
-            //
-          });
 
-  Widget bottomNavigationMenu() => MediaQuery.of(context).size.width <= 800
-      ? BottomNavigationBar(
-          items: [
-            new BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),
-            ),
-            new BottomNavigationBarItem(
-              icon: Icon(Icons.tram),
-              title: Text('Tickets'),
-            ),
-            new BottomNavigationBarItem(
-                icon: Icon(Icons.portrait), title: Text('Profile'))
-          ],
-        )
-      : SizedBox();
-
-  Widget placeContainer(Place place) {
+Widget placeContainer(Place place) {
     return Card(
       child: Column(
         children: <Widget>[
@@ -165,4 +119,55 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
+  Widget bottomNavigationMenu() => MediaQuery.of(context).size.width<=800
+  ? BottomNavigationBar(
+     items:[
+       BottomNavigationBarItem(
+         icon:Icon(Icons.home),
+         title: Text('Home'),
+       ),
+       BottomNavigationBarItem(
+         icon:Icon(Icons.train),
+         title: Text('Tickets'),
+       ),
+       BottomNavigationBarItem(
+         icon:Icon(Icons.portrait),
+         title: Text('Profile'),
+       ),
+     ]
+  )
+  :SizedBox();
+
+
+
+
+  Widget CustomLeadingAction()=>MediaQuery.of(context).size.width>800.0
+  ? Row(children: <Widget>[
+      IconButton(
+        icon:Icon(Icons.home),
+        onPressed: (){
+
+        },
+      ),
+      SizedBox(width: 10.0,),
+      IconButton(
+        icon:Icon(Icons.train),
+        onPressed: (){
+
+        },
+      ),
+      SizedBox(width: 10.0,),
+      IconButton(
+        icon:Icon(Icons.portrait),
+        onPressed: (){
+
+        },
+      ),
+  ],)
+  : IconButton(
+          icon: Icon(Icons.train),
+          onPressed: () {
+            //
+          });
 }
